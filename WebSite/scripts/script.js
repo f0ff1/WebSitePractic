@@ -88,9 +88,9 @@ ProjectCategories.addEventListener('click', PressButton)
 
 
 
-// function StartVideo() {
-//   VideoContainer.style.visibility = 'visible';
-//   YoutubeVideo.play() ;
-// }
-//
-// ButtonVideoPlay.addEventListener('click', StartVideo);
+function StartVideo() {
+  VideoContainer.style.visibility = 'visible';
+  YoutubeVideo.play() ;
+}
+
+ButtonVideoPlay.addEventListener('click', StartVideo);
