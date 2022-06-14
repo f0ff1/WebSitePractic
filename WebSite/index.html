@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="styles/style.css">
   <title>Waxom</title>
 </head>
 <body >
-  <script src="scripts/script.js"></script>
+
   <header>
     <h1 class="visually-hidden">Wacom</h1>
     <nav class="main-navigation">
@@ -57,7 +61,7 @@
           </a>
         </li>
         <li>
-          <button class="icon-search">
+          <button  class="icon-search">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <defs>
                 <filter id="search" width="24" height="24" x="1522" y="55" filterUnits="userSpaceOnUse">
@@ -68,6 +72,9 @@
               <path d="m1545.76 77.682-6.19-6.095a9.807 9.807 0 0 0 2.62-6.658 10.1 10.1 0 1 0-10.1 9.934 10.183 10.183 0 0 0 6.36-2.218l6.21 6.12a.788.788 0 0 0 1.1 0 .763.763 0 0 0 0-1.083Zm-13.67-4.348a8.406 8.406 0 1 1 8.54-8.405 8.477 8.477 0 0 1-8.54 8.405Z" style="fill-rule:evenodd;filter:url(#search)" transform="translate(-1522 -55)"/>
             </svg>
           </button>
+        </li>
+        <li  class="showed-modal-search">
+          <input class="input-search" type="text" placeholder="Search">
         </li>
       </ul>
     </nav>
@@ -222,279 +229,293 @@
         <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
         <div class="project-categories">
           <button class="button" type="button">All</button>
-          <button class="button pressed" type="button">Web Design</button>
+          <button class="button" type="button">Web Design</button>
           <button class="button" type="button">Mobile App</button>
           <button class="button" type="button">Illustration</button>
           <button class="button" type="button">Photography</button>
         </div>
       </div>
       <div class="project-content">
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/first-project.png" width="370" height="273" alt="second-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Claritas Etiam Processus</h3>
-              <p>Photography, Nature</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/second-project.png" width="370" height="273" alt="second-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Quam Nutamus Farum</h3>
-              <p>Graphic Design, Mock-Up</p>
-            </div>
+        <div class="increase-img">
+          <img src="images/ImgHolder/holder.jpg" width:"1170" height="710" alt="Increased imageBlocks">
+          <button class="close-modal-img-button" type="button">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50" width="20px"
+            height="20px">
+            <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/photo.png" width="370" height="273" alt="second-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
           </div>
         </div>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/third-project.png" width="370" height="273" alt="third-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Usus Legentis Videntur</h3>
-              <p>Photography, Holiday</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/fourth-project.png" width="370" height="273" alt="second-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Claritas Etiam Processus</h3>
-              <p>Photography, Nature</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/fifth-project.png" width="370" height="273" alt="second-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Quam Nutamus Farum</h3>
-              <p>Graphic Design, Mock-Up</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="images/projects/sixth-project.png" width="370" height="273" alt="third-project">
-            <div class="project-logo">
-              <a href="#" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
-                  <defs>
-                    <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#c7b299" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
-                </svg>
-                <span class="visually-hidden">
-                  To the source
-                </span>
-              </a>
-              <button class="lightzoom" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
-                  <defs>
-                    <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
-                      <feFlood flood-color="#fff" result="flood"/>
-                      <feComposite in2="SourceGraphic" operator="in" result="composite"/>
-                      <feBlend in2="SourceGraphic" result="blend"/>
-                    </filter>
-                  </defs>
-                  <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
-                </svg>
-                <span class="visually-hidden">
-                  Increase
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="project-placeholder">
-            <div class="placeholder-info">
-              <h3>Usus Legentis Videntur</h3>
-              <p>Photography, Holiday</p>
-            </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Claritas Etiam Processus</h3>
+            <p>Photography, Nature</p>
           </div>
         </div>
       </div>
-    </ul>
-    <div class="load-more">
-      <a class="a-button" href="#">Load More</a>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/second-project.jpg" width="370" height="273" alt="second-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Quam Nutamus Farum</h3>
+            <p>Graphic Design, Mock-Up</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/third-project.jpg" width="370" height="273" alt="third-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Usus Legentis Videntur</h3>
+            <p>Photography, Holiday</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/fourth-project.jpg" width="370" height="273" alt="second-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Claritas Etiam Processus</h3>
+            <p>Photography, Nature</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/fifth-project.jpg" width="370" height="273" alt="second-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Quam Nutamus Farum</h3>
+            <p>Graphic Design, Mock-Up</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-img">
+          <img class="project-image" src="images/projects/sixth-project.jpg" width="370" height="273" alt="third-project">
+          <div class="project-logo">
+            <a href="#" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.624" height="24.62">
+                <defs>
+                  <filter id="lnk" width="24.624" height="24.62" x="920.688" y="2641.72" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#c7b299" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M943.5 2643.49a6.208 6.208 0 0 0-8.743 0l-4.721 4.73a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65a6.064 6.064 0 0 0 2.079 1.36 6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75Zm-12.561 16.03-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33Z" style="fill-rule:evenodd;filter:url(#lnk)" transform="translate(-920.688 -2641.72)"/>
+              </svg>
+              <span class="visually-hidden">
+                To the source
+              </span>
+            </a>
+            <button class="lightzoom" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25.157" height="24.47">
+                <defs>
+                  <filter id="inc" width="25.157" height="24.47" x="974.781" y="2641.19" filterUnits="userSpaceOnUse">
+                    <feFlood flood-color="#fff" result="flood"/>
+                    <feComposite in2="SourceGraphic" operator="in" result="composite"/>
+                    <feBlend in2="SourceGraphic" result="blend"/>
+                  </filter>
+                </defs>
+                <path d="M985.3 2645.08a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77Zm14.152 17.8-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29Zm-22.047-10.68a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42Z" style="fill-rule:evenodd;filter:url(#inc)" transform="translate(-974.781 -2641.19)"/>
+              </svg>
+              <span class="visually-hidden">
+                Increase
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="project-placeholder">
+          <div class="placeholder-info">
+            <h3>Usus Legentis Videntur</h3>
+            <p>Photography, Holiday</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </ul>
+  <div class="load-more">
+    <a class="a-button" href="#">Load More</a>
+  </div>
+</section>
 </div>
 <section class="video-presentation">
+  <div class="video-container">
+    <!-- <iframe class="youtube-video" src="https://www.youtube.com/embed/9gOCYLvwAyk?controls=0" title="YouTube video player" frameborder="0" autoplay = 1 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  </div>
   <div class="video-items">
     <button type="button" class="button-play">
       <img class="button-play-icon" src="images/projects/icon-play.png" width="70" height="70" alt="icon-play">
@@ -502,7 +523,7 @@
     <h2>Waxom Video Presentation</h2>
     <div class="video-description">
       <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
-      <p class="time">03:26</p>
+      <p class="time">03:08</p>
     </div>
     <div class="video-button">
     </div>
@@ -773,7 +794,7 @@
             <h3 class="visually-hidden">Copyright information</h3>
             <ul class="ul-copyright">
               <li class="down-panel-item ">
-                  Copyright © 2015 <span>Waxom</span>
+                Copyright © 2015 <span>Waxom</span>
               </li>
               <li>
                 |
@@ -825,5 +846,7 @@
     </div>
   </section>
 </footer>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

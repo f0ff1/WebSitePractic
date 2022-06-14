@@ -58,7 +58,7 @@ path {
 
 .main-navigation {
   display: flex;
-  width: 1175px;
+  width: 1352px;
   margin: 0 auto;
 
 }
@@ -101,18 +101,32 @@ path {
 }
 
 .cart-search {
-  width: 70px;
+  width: 265px;
   display: flex;
-  margin-left: 22px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.navigation-bar li {
-
+.cart-search li {
+  margin-left: 15px;
 }
 
 
+.input-search{
+  margin-left: 4px;
+  height: 24px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  padding-left: 5px;
+  font-size: 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  outline: inherit;
+}
 
+.showed-modal-search {
+  display: none;
+}
 
 .icon-cart {
 
@@ -639,6 +653,17 @@ p.time {
   padding: 200px;
 }
 
+.video-container {
+  position: absolute;
+  visibility: hidden;
+}
+
+.youtube-video {
+  width: 1920px;
+  min-height: 698px;
+
+}
+
 .button-play {
   border: none;
   background-color: transparent;
@@ -733,6 +758,10 @@ padding-bottom: 12px;
   margin: 40px 0 0 0;
 }
 
+.increase-img {
+  width: 1170px;
+}
+
 .project-item {
   margin: 0 0 30px;
 }
@@ -745,6 +774,29 @@ padding-bottom: 12px;
 .project-img {
   position: relative;
 
+}
+
+.increase-img {
+  position: absolute;
+  z-index: 3;
+  visibility: hidden;
+  background-color: #fff;
+}
+
+.close-modal-img-button {
+  z-index: 4;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-modal-img-button:hover svg{
+  fill: #c7b299;
+  background-color: rgba(17, 17, 17, 0.2);
+  border-radius: 3px;
 }
 
 .project-img img {
@@ -1031,6 +1083,7 @@ img {
   cursor: grab;
 }
 
+
 .parthers-logos.grabbing {
   cursor: grab;
 }
@@ -1252,4 +1305,16 @@ footer hr {
 .down-panel-item:hover a{
   color: #c7b299;
   transition: all 0.3s ease 0.0s;
+}
+
+.swiper {
+  padding-top: 80px;
+  padding-right: 10px;
+  background-color: silver;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 210px;
+  height: 210px;
 }
