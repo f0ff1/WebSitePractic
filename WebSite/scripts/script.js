@@ -94,3 +94,31 @@ function StartVideo() {
 }
 
 ButtonVideoPlay.addEventListener('click', StartVideo);
+
+
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  // effect: 'slide',
+  // speed: 900,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+const touchSwiper = new Swiper('.touch-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+});
